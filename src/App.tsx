@@ -10,6 +10,10 @@ import Result from "./pages/Result";
 import History from "./pages/History";
 import Gallery from "./pages/Gallery";
 import About from "./pages/About";
+import Landmarks from "./pages/Landmarks";
+import Chat from "./pages/Chat";
+import KidsMode from "./pages/KidsMode";
+import Booking from "./pages/Booking";
 import NotFound from "./pages/NotFound";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -31,6 +35,10 @@ const App = () => (
               <Route path="/result" element={<Result />} />
               <Route path="/history" element={<History />} />
               <Route path="/gallery" element={<Gallery />} />
+              <Route path="/landmarks" element={<Landmarks />} />
+              <Route path="/chat" element={<Chat />} />
+              <Route path="/kids" element={<KidsMode />} />
+              <Route path="/booking" element={<Booking />} />
               <Route path="/about" element={<About />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

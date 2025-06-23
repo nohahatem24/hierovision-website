@@ -1,16 +1,22 @@
 
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 
 const Header = () => {
   const location = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { path: "/", label: "Home" },
-    { path: "/upload", label: "Upload" },
-    { path: "/history", label: "History" },
-    { path: "/gallery", label: "Gallery" },
-    { path: "/about", label: "About" },
+    { path: "/", label: "Home", icon: "🏠" },
+    { path: "/upload", label: "Upload", icon: "📜" },
+    { path: "/landmarks", label: "Landmarks", icon: "🏛️" },
+    { path: "/chat", label: "AI Oracle", icon: "🔮" },
+    { path: "/kids", label: "Kids Mode", icon: "🧒" },
+    { path: "/booking", label: "Book Tours", icon: "🎫" },
+    { path: "/history", label: "History", icon: "📚" },
+    { path: "/gallery", label: "Gallery", icon: "🖼️" },
+    { path: "/about", label: "About", icon: "ℹ️" },
   ];
 
   return (
@@ -18,32 +24,33 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo and Title */}
         <Link to="/" className="flex items-center space-x-3 group">
-          <div className="w-10 h-10 bg-gradient-to-br from-[#B98E57] to-[#5E4022] rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
-            <span className="text-white text-xl font-bold">𓂀</span>
+          <div className="w-12 h-12 bg-gradient-to-br from-[#B98E57] to-[#5E4022] rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
+            <span className="text-white text-2xl font-bold">𓂀</span>
           </div>
           <div>
-            <h1 className="text-2xl font-serif font-bold text-[#5E4022] tracking-wide">
+            <h1 className="text-2xl md:text-3xl font-serif font-bold text-[#5E4022] tracking-wide">
               HieroVision
             </h1>
-            <p className="text-xs text-[#5E4022]/70 font-light">Decode Ancient Egypt</p>
+            <p className="text-xs text-[#5E4022]/70 font-light">Ancient Egypt Decoded</p>
           </div>
         </Link>
 
-        {/* Navigation */}
-        <nav className="hidden md:flex space-x-8">
+        {/* Desktop Navigation */}
+        <nav className="hidden lg:flex space-x-6">
           {navItems.map((item) => (
             <Link
               key={item.path}
               to={item.path}
               className={cn(
-                "px-4 py-2 rounded-lg font-medium transition-all duration-300 relative",
+                "flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 relative",
                 "hover:bg-[#B98E57]/20 hover:text-[#5E4022] hover:shadow-md",
                 location.pathname === item.path
                   ? "bg-[#B98E57]/30 text-[#5E4022] shadow-md"
                   : "text-[#5E4022]/80"
               )}
             >
-              {item.label}
+              <span className="text-sm">{item.icon}</span>
+              <span className="font-serif">{item.label}</span>
               {location.pathname === item.path && (
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-6 h-0.5 bg-[#B98E57] rounded-full"></div>
               )}
@@ -52,14 +59,42 @@ const Header = () => {
         </nav>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden p-2 rounded-lg hover:bg-[#B98E57]/20 transition-colors">
+        <button 
+          className="lg:hidden p-2 rounded-lg hover:bg-[#B98E57]/20 transition-colors"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
           <div className="w-6 h-6 flex flex-col justify-center space-y-1">
-            <span className="w-full h-0.5 bg-[#5E4022] rounded"></span>
-            <span className="w-full h-0.5 bg-[#5E4022] rounded"></span>
-            <span className="w-full h-0.5 bg-[#5E4022] rounded"></span>
+            <span className={`w-full h-0.5 bg-[#5E4022] rounded transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+            <span className={`w-full h-0.5 bg-[#5E4022] rounded transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
+            <span className={`w-full h-0.5 bg-[#5E4022] rounded transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
           </div>
         </button>
       </div>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-[#F5E9D3]/95 backdrop-blur-sm border-b border-[#B98E57]/30 shadow-lg z-50">
+          <nav className="container mx-auto px-6 py-4 space-y-2">
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={cn(
+                  "flex items-center space-x-3 px-4 py-3 rounded-lg font-medium transition-all duration-300 w-full",
+                  "hover:bg-[#B98E57]/20 hover:text-[#5E4022]",
+                  location.pathname === item.path
+                    ? "bg-[#B98E57]/30 text-[#5E4022] shadow-md"
+                    : "text-[#5E4022]/80"
+                )}
+              >
+                <span className="text-lg">{item.icon}</span>
+                <span className="font-serif">{item.label}</span>
+              </Link>
+            ))}
+          </nav>
+        </div>
+      )}
 
       {/* Decorative border */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#B98E57] to-transparent"></div>
