@@ -1,94 +1,103 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+/* HieroVision Design System - All colors explicitly defined */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Egyptian Color Palette */
+    --egyptian-gold: #B98E57;
+    --egyptian-gold-light: #C69968;
+    --egyptian-gold-dark: #A67D46;
+    --egyptian-brown: #5E4022;
+    --egyptian-brown-light: #6F4A33;
+    --egyptian-brown-dark: #4D3318;
+    --egyptian-sand: #F5E9D3;
+    --egyptian-sand-light: #FAF0E4;
+    --egyptian-sand-dark: #E3D2B7;
+    --egyptian-papyrus: #F5E9D3;
+    --egyptian-stone: #E3D2B7;
+    
+    /* Shadcn UI Colors - Explicit values */
+    --background: 255 255 255; /* Pure white */
+    --foreground: 34 34 34; /* Dark gray */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 255 255 255; /* Pure white */
+    --card-foreground: 34 34 34; /* Dark gray */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 255 255 255; /* Pure white */
+    --popover-foreground: 34 34 34; /* Dark gray */
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 34 34 34; /* Dark gray */
+    --primary-foreground: 255 255 255; /* Pure white */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 245 245 245; /* Light gray */
+    --secondary-foreground: 34 34 34; /* Dark gray */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 245 245 245; /* Light gray */
+    --muted-foreground: 107 114 126; /* Medium gray */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 245 245 245; /* Light gray */
+    --accent-foreground: 34 34 34; /* Dark gray */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 239 68 68; /* Red */
+    --destructive-foreground: 255 255 255; /* Pure white */
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 229 231 235; /* Light border gray */
+    --input: 229 231 235; /* Light border gray */
+    --ring: 34 34 34; /* Dark gray */
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 249 250 251; /* Very light gray */
+    --sidebar-foreground: 107 114 126; /* Medium gray */
+    --sidebar-primary: 15 23 42; /* Dark slate */
+    --sidebar-primary-foreground: 248 250 252; /* Very light gray */
+    --sidebar-accent: 241 245 249; /* Light slate */
+    --sidebar-accent-foreground: 15 23 42; /* Dark slate */
+    --sidebar-border: 226 232 240; /* Light border */
+    --sidebar-ring: 59 130 246; /* Blue */
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 15 15 15; /* Almost black */
+    --foreground: 250 250 250; /* Almost white */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 15 15 15; /* Almost black */
+    --card-foreground: 250 250 250; /* Almost white */
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 15 15 15; /* Almost black */
+    --popover-foreground: 250 250 250; /* Almost white */
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 250 250 250; /* Almost white */
+    --primary-foreground: 15 15 15; /* Almost black */
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 39 39 42; /* Dark gray */
+    --secondary-foreground: 250 250 250; /* Almost white */
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 39 39 42; /* Dark gray */
+    --muted-foreground: 161 161 170; /* Light gray */
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 39 39 42; /* Dark gray */
+    --accent-foreground: 250 250 250; /* Almost white */
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 127 29 29; /* Dark red */
+    --destructive-foreground: 250 250 250; /* Almost white */
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 39 39 42; /* Dark gray */
+    --input: 39 39 42; /* Dark gray */
+    --ring: 212 212 216; /* Light gray */
+    
+    --sidebar-background: 15 23 42; /* Dark slate */
+    --sidebar-foreground: 241 245 249; /* Light slate */
+    --sidebar-primary: 99 102 241; /* Blue */
+    --sidebar-primary-foreground: 255 255 255; /* Pure white */
+    --sidebar-accent: 30 41 59; /* Medium slate */
+    --sidebar-accent-foreground: 241 245 249; /* Light slate */
+    --sidebar-border: 30 41 59; /* Medium slate */
+    --sidebar-ring: 59 130 246; /* Blue */
   }
 }
 
@@ -99,5 +108,64 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Custom Egyptian utility classes */
+@layer utilities {
+  .bg-egyptian-gold {
+    background-color: var(--egyptian-gold);
+  }
+  
+  .bg-egyptian-gold-light {
+    background-color: var(--egyptian-gold-light);
+  }
+  
+  .bg-egyptian-gold-dark {
+    background-color: var(--egyptian-gold-dark);
+  }
+  
+  .bg-egyptian-brown {
+    background-color: var(--egyptian-brown);
+  }
+  
+  .bg-egyptian-brown-light {
+    background-color: var(--egyptian-brown-light);
+  }
+  
+  .bg-egyptian-brown-dark {
+    background-color: var(--egyptian-brown-dark);
+  }
+  
+  .bg-egyptian-sand {
+    background-color: var(--egyptian-sand);
+  }
+  
+  .bg-egyptian-sand-light {
+    background-color: var(--egyptian-sand-light);
+  }
+  
+  .bg-egyptian-sand-dark {
+    background-color: var(--egyptian-sand-dark);
+  }
+  
+  .text-egyptian-gold {
+    color: var(--egyptian-gold);
+  }
+  
+  .text-egyptian-brown {
+    color: var(--egyptian-brown);
+  }
+  
+  .text-egyptian-sand {
+    color: var(--egyptian-sand);
+  }
+  
+  .border-egyptian-gold {
+    border-color: var(--egyptian-gold);
+  }
+  
+  .border-egyptian-brown {
+    border-color: var(--egyptian-brown);
   }
 }

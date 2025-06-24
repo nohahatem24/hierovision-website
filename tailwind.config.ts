@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -19,6 +20,22 @@ export default {
 		},
 		extend: {
 			colors: {
+				// Egyptian Color Palette
+				egyptian: {
+					gold: '#B98E57',
+					'gold-light': '#C69968',
+					'gold-dark': '#A67D46',
+					brown: '#5E4022',
+					'brown-light': '#6F4A33',
+					'brown-dark': '#4D3318',
+					sand: '#F5E9D3',
+					'sand-light': '#FAF0E4',
+					'sand-dark': '#E3D2B7',
+					papyrus: '#F5E9D3',
+					stone: '#E3D2B7',
+				},
+				
+				// Shadcn UI Colors
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
