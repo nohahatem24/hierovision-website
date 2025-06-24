@@ -13,7 +13,7 @@ const Header = () => {
     { path: "/", label: "Home"},
     { path: "/upload", label: "Upload"},
     { path: "/landmarks", label: "Landmarks"},
-    { path: "/chat", label: "AI Oracle"},
+    { path: "/chat", label: "AnubAI"},
     { path: "/kids", label: "Kids Mode"},
     { path: "/booking", label: "Book Tours"},
     { path: "/history", label: "History"},

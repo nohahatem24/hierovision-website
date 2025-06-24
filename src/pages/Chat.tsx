@@ -15,7 +15,7 @@ const Chat = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      text: "Welcome to HieroVision's AI Oracle! I am here to share the wisdom of ancient Egypt. Ask me about hieroglyphs, pharaohs, monuments, or any aspect of this magnificent civilization.",
+      text: "Welcome to HieroVision's AnubAI! I am here to share the wisdom of ancient Egypt. Ask me about hieroglyphs, pharaohs, monuments, or any aspect of this magnificent civilization.",
       isUser: false,
       timestamp: new Date()
     }
@@ -81,10 +81,10 @@ const Chat = () => {
       <div className="text-center mb-12">
         <div className="text-4xl text-[#B98E57] mb-4">🔮</div>
         <h1 className="text-4xl md:text-5xl font-serif font-bold text-[#5E4022] mb-4">
-          Oracle of Ancient Egypt
+          AnubAI of Ancient Egypt
         </h1>
         <p className="text-lg text-[#5E4022]/70">
-          Consult with our AI-powered oracle to unlock the secrets and wisdom of ancient Egypt
+          Consult with our AI-powered AnubAI to unlock the secrets and wisdom of ancient Egypt
         </p>
       </div>
 
@@ -137,7 +137,7 @@ const Chat = () => {
                       <div className="w-2 h-2 bg-[#B98E57] rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
                       <div className="w-2 h-2 bg-[#B98E57] rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
                     </div>
-                    <span className="text-[#5E4022]/70 text-sm font-serif">Oracle is consulting the ancient texts...</span>
+                    <span className="text-[#5E4022]/70 text-sm font-serif">AnubAI is consulting the ancient texts...</span>
                   </div>
                 </CardContent>
               </Card>
@@ -168,7 +168,7 @@ const Chat = () => {
         {/* Input Area */}
         <div className="relative z-10 flex gap-2">
           <Input
-            placeholder="Ask the Oracle about ancient Egypt..."
+            placeholder="Ask the AnubAI about ancient Egypt..."
             value={inputMessage}
             onChange={(e) => setInputMessage(e.target.value)}
             onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}

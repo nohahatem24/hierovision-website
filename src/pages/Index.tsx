@@ -67,7 +67,7 @@ const Index = () => {
         <Link to="/chat">
           <div className="group bg-gradient-to-br from-white/30 to-white/10 backdrop-blur-sm border-2 border-[#B98E57]/30 rounded-2xl p-6 text-[#5E4022] hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl text-center h-full">
             <div className="text-4xl mb-4">🔮</div>
-            <h3 className="text-xl font-serif font-bold mb-2">AI Oracle</h3>
+            <h3 className="text-xl font-serif font-bold mb-2">AnubAI</h3>
             <p className="text-sm opacity-80">Chat with AI about ancient Egypt</p>
           </div>
         </Link>
