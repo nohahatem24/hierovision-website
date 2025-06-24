@@ -1,4 +1,3 @@
-
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
@@ -11,15 +10,15 @@ const Header = () => {
   const { user, logout } = useAuth();
 
   const navItems = [
-    { path: "/", label: "Home", icon: "🏠" },
-    { path: "/upload", label: "Upload", icon: "📜" },
-    { path: "/landmarks", label: "Landmarks", icon: "🏛️" },
-    { path: "/chat", label: "AI Oracle", icon: "🔮" },
-    { path: "/kids", label: "Kids Mode", icon: "🧒" },
-    { path: "/booking", label: "Book Tours", icon: "🎫" },
-    { path: "/history", label: "History", icon: "📚" },
-    { path: "/gallery", label: "Gallery", icon: "🖼️" },
-    { path: "/about", label: "About", icon: "ℹ️" },
+    { path: "/", label: "Home"},
+    { path: "/upload", label: "Upload"},
+    { path: "/landmarks", label: "Landmarks"},
+    { path: "/chat", label: "AI Oracle"},
+    { path: "/kids", label: "Kids Mode"},
+    { path: "/booking", label: "Book Tours"},
+    { path: "/history", label: "History"},
+    { path: "/gallery", label: "Gallery"},
+    { path: "/about", label: "About"},
   ];
 
   return (
@@ -52,7 +51,6 @@ const Header = () => {
                   : "text-[#5E4022]/80"
               )}
             >
-              <span className="text-sm">{item.icon}</span>
               <span className="font-serif">{item.label}</span>
               {location.pathname === item.path && (
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-6 h-0.5 bg-[#B98E57] rounded-full"></div>
@@ -134,7 +132,6 @@ const Header = () => {
                     : "text-[#5E4022]/80"
                 )}
               >
-                <span className="text-lg">{item.icon}</span>
                 <span className="font-serif">{item.label}</span>
               </Link>
             ))}
@@ -148,7 +145,6 @@ const Header = () => {
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="flex items-center space-x-3 px-4 py-3 rounded-lg font-medium transition-all duration-300 w-full hover:bg-[#B98E57]/20 text-[#5E4022]/80 hover:text-[#5E4022]"
                   >
-                    <span className="text-lg">👤</span>
                     <span className="font-serif">{user.name}</span>
                   </Link>
                   <button
@@ -158,7 +154,6 @@ const Header = () => {
                     }}
                     className="flex items-center space-x-3 px-4 py-3 rounded-lg font-medium transition-all duration-300 w-full hover:bg-[#B98E57]/20 text-[#5E4022]/80 hover:text-[#5E4022]"
                   >
-                    <span className="text-lg">🚪</span>
                     <span className="font-serif">Logout</span>
                   </button>
                 </>
@@ -169,7 +164,6 @@ const Header = () => {
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="flex items-center space-x-3 px-4 py-3 rounded-lg font-medium transition-all duration-300 w-full hover:bg-[#B98E57]/20 text-[#5E4022]/80 hover:text-[#5E4022]"
                   >
-                    <span className="text-lg">🔑</span>
                     <span className="font-serif">Login</span>
                   </Link>
                   <Link
@@ -177,7 +171,6 @@ const Header = () => {
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="flex items-center space-x-3 px-4 py-3 rounded-lg font-medium transition-all duration-300 w-full hover:bg-[#B98E57]/20 text-[#5E4022]/80 hover:text-[#5E4022]"
                   >
-                    <span className="text-lg">✨</span>
                     <span className="font-serif">Sign Up</span>
                   </Link>
                 </>
