@@ -8,19 +8,19 @@
 @layer base {
   :root {
     /* Egyptian Color Palette */
-    --egyptian-gold: #B98E57;
-    --egyptian-gold-light: #C69968;
-    --egyptian-gold-dark: #A67D46;
-    --egyptian-brown: #5E4022;
-    --egyptian-brown-light: #6F4A33;
-    --egyptian-brown-dark: #4D3318;
-    --egyptian-sand: #F5E9D3;
-    --egyptian-sand-light: #FAF0E4;
-    --egyptian-sand-dark: #E3D2B7;
-    --egyptian-papyrus: #F5E9D3;
-    --egyptian-stone: #E3D2B7;
+    --egyptian-gold: 185 142 87;
+    --egyptian-gold-light: 198 153 104;
+    --egyptian-gold-dark: 166 125 70;
+    --egyptian-brown: 94 64 34;
+    --egyptian-brown-light: 111 74 51;
+    --egyptian-brown-dark: 77 51 24;
+    --egyptian-sand: 245 233 211;
+    --egyptian-sand-light: 250 240 228;
+    --egyptian-sand-dark: 227 210 183;
+    --egyptian-papyrus: 245 233 211;
+    --egyptian-stone: 227 210 183;
     
-    /* Shadcn UI Colors - Explicit values */
+    /* Shadcn UI Colors - Explicit RGB values */
     --background: 255 255 255; /* Pure white */
     --foreground: 34 34 34; /* Dark gray */
 
@@ -114,58 +114,58 @@
 /* Custom Egyptian utility classes */
 @layer utilities {
   .bg-egyptian-gold {
-    background-color: var(--egyptian-gold);
+    background-color: rgb(185 142 87);
   }
   
   .bg-egyptian-gold-light {
-    background-color: var(--egyptian-gold-light);
+    background-color: rgb(198 153 104);
   }
   
   .bg-egyptian-gold-dark {
-    background-color: var(--egyptian-gold-dark);
+    background-color: rgb(166 125 70);
   }
   
   .bg-egyptian-brown {
-    background-color: var(--egyptian-brown);
+    background-color: rgb(94 64 34);
   }
   
   .bg-egyptian-brown-light {
-    background-color: var(--egyptian-brown-light);
+    background-color: rgb(111 74 51);
   }
   
   .bg-egyptian-brown-dark {
-    background-color: var(--egyptian-brown-dark);
+    background-color: rgb(77 51 24);
   }
   
   .bg-egyptian-sand {
-    background-color: var(--egyptian-sand);
+    background-color: rgb(245 233 211);
   }
   
   .bg-egyptian-sand-light {
-    background-color: var(--egyptian-sand-light);
+    background-color: rgb(250 240 228);
   }
   
   .bg-egyptian-sand-dark {
-    background-color: var(--egyptian-sand-dark);
+    background-color: rgb(227 210 183);
   }
   
   .text-egyptian-gold {
-    color: var(--egyptian-gold);
+    color: rgb(185 142 87);
   }
   
   .text-egyptian-brown {
-    color: var(--egyptian-brown);
+    color: rgb(94 64 34);
   }
   
   .text-egyptian-sand {
-    color: var(--egyptian-sand);
+    color: rgb(245 233 211);
   }
   
   .border-egyptian-gold {
-    border-color: var(--egyptian-gold);
+    border-color: rgb(185 142 87);
   }
   
   .border-egyptian-brown {
-    border-color: var(--egyptian-brown);
+    border-color: rgb(94 64 34);
   }
 }
