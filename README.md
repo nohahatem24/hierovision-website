@@ -1,4 +1,5 @@
 HieroVision Website - Ancient Egyptian Hieroglyph Recognition
+
 🏺 HieroVision is a modern web application that uses AI to detect, translate, and analyze ancient Egyptian hieroglyphs. Built with React/TypeScript frontend and Flask Python backend with machine learning capabilities.
 
 ✨ Features
